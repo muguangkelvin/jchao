@@ -1,0 +1,27 @@
+{{ define "main" }}
+<div class="container" style="margin-top: 30px;">
+  <div class="section-title">
+    <span>❓ 科学上网与机场选购 FAQ 常见问题大全 (100 问完整解答)</span>
+  </div>
+  <p style="font-size:1rem; color:#475569; margin-bottom:24px; background:#eff6ff; padding:16px; border-radius:8px; border-left:4px solid #2563eb;">
+    本页面汇集了小白零基础选购翻墙机场、全平台客户端（Clash / Shadowrocket / Sing-box / v2rayN）配置、IPLC专线原理、防失联技巧及常见报错（Timeout、DNS污染、订阅解析失败）的 100 个核心高频疑问与详细干货解答。全问答直接展开，供您快速查阅。
+  </p>
+
+  <div style="margin-bottom: 30px;">
+    {{ range .Pages }}
+      {{ if ne .Title $.Title }}
+      <div class="faq-item" id="{{ .Slug }}">
+        <h3 class="faq-question">❓ <a href="{{ .RelPermalink }}index.html">{{ .Title }}</a></h3>
+        <div class="faq-answer">
+          {{ .Content }}
+        </div>
+        <div style="font-size:0.8rem; color:#94a3b8; margin-top:10px; display:flex; justify-content:space-between;">
+          <span>分类领域：常见问题答疑</span>
+          <a href="{{ .RelPermalink }}index.html" style="color:#2563eb; font-weight:bold;">查看独立问答页面 →</a>
+        </div>
+      </div>
+      {{ end }}
+    {{ end }}
+  </div>
+</div>
+{{ end }}

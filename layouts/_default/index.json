@@ -1,0 +1,8 @@
+[{{ range $index, $page := .Site.RegularPages }}{{ if $index }},{{ end }}{
+  "title": {{ $page.Title | jsonify }},
+  "permalink": {{ (printf "%sindex.html" $page.RelPermalink) | jsonify }},
+  "section": {{ (or $page.Section "综合") | jsonify }},
+  "description": {{ (or $page.Description "") | jsonify }},
+  "summary": {{ $page.Summary | plainify | jsonify }},
+  "contents": {{ $page.Plain | jsonify }}
+}{{ end }}]

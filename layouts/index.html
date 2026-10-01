@@ -1,0 +1,275 @@
+{{ define "main" }}
+  {{ partial "hero.html" . }}
+
+  <div class="container">
+    <div class="layout-grid">
+      <div class="main-content">
+        <!-- 0. Brand Introduction & Selection Guide Banner -->
+        <section style="background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 24px 28px; margin-bottom: 35px; box-shadow: var(--shadow); border-left: 5px solid var(--primary);">
+          <h2 style="font-size: 1.35rem; font-weight: 800; color: #0f172a; margin-bottom: 8px;">
+            📘 机场好：什么是好机场？优质网络加速节点选择与评测指南
+          </h2>
+          <p style="font-size: 0.92rem; color: #64748b; margin-bottom: 18px; line-height: 1.6;">
+            <strong>说明：</strong>全面解析什么是“好机场”，从线路架构、协议支持、流媒体解锁到售后服务，带你避开跑路坑，选出最适合自己的高性价比稳定节点。
+          </p>
+
+          <div style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 8px; padding: 18px 22px; margin-bottom: 20px; font-size: 0.95rem; line-height: 1.8; color: #334155;">
+            在浩瀚的网络世界里，找到一个速度飞快、晚高峰不卡顿且稳定不跑路的节点服务，是每个科学上网用户的刚需。无论是查阅学术资料、外贸办公，还是畅看 4K 流媒体与使用 AI 工具，“机场好”往往意味着省心、高效与畅通无阻。本篇指南将带你深入了解什么是真正的“好机场”，并分享挑选优质节点的核心维度。
+          </div>
+
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 16px; margin-bottom: 20px;">
+            <div style="background: #fff; border: 1px solid #e2e8f0; border-radius: 8px; padding: 16px 18px;">
+              <h3 style="font-size: 1.05rem; font-weight: 700; color: #1e3a8a; margin-bottom: 8px;">
+                💡 什么是【机场好】？
+              </h3>
+              <p style="font-size: 0.9rem; color: #475569; line-height: 1.7; margin: 0;">
+                “机场好”是一个专注于提供高品质网络代理节点推荐、评测与使用教程的分享平台。我们旨在帮助用户拨开迷雾，从市场上成百上千个服务商中，筛选出线路硬核、价格合理且运维可靠的优质“机场”。在这里不仅有不同梯队机场的横向测速对比，还有针对不同设备（Clash、Sing-box、v2rayN、Shadowrocket 等）的保姆级配置教程，让无论是刚入门的新手还是对网络延迟有极致要求的进阶玩家，都能快速找到符合需求的专属线路。
+              </p>
+            </div>
+
+            <div style="background: #fff; border: 1px solid #e2e8f0; border-radius: 8px; padding: 16px 18px;">
+              <h3 style="font-size: 1.05rem; font-weight: 700; color: #1e3a8a; margin-bottom: 8px;">
+                🎯 如何挑选适合你的节点方案？
+              </h3>
+              <ul style="font-size: 0.88rem; color: #475569; line-height: 1.85; padding-left: 18px; margin: 0;">
+                <li><strong>轻度浏览 / 外贸查资料</strong>：选择性价比高、带有 BGP 节点的大流量月付套餐即可。</li>
+                <li><strong>4K 影音与日常主力</strong>：优选包含中转与轻量专线、节点覆盖港台日美新主流地区的综合型机场。</li>
+                <li><strong>外服游戏与高端办公</strong>：优先考虑全 IPLC/IEPL 专线机场，保障端到端超低延迟与零丢包。</li>
+              </ul>
+            </div>
+          </div>
+
+          <div style="background: #ffffff; border: 1px solid #cbd5e1; border-radius: 8px; padding: 20px 24px;">
+            <h3 style="font-size: 1.1rem; font-weight: 800; color: #0f172a; margin-bottom: 14px; padding-bottom: 6px; border-bottom: 2px solid #2563eb;">
+              ⚖️ 衡量一个“好机场”的 5 大核心标准
+            </h3>
+            
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 16px;">
+              <div style="font-size: 0.88rem; line-height: 1.7; color: #334155;">
+                <h4 style="font-size: 0.95rem; font-weight: 700; color: #2563eb; margin-bottom: 4px;">1. 骨干线路质量</h4>
+                <p style="margin:0;"><strong>直连与公网中继</strong>：成本较低，适合轻度日常浏览，但晚高峰容易受骨干网拥堵影响。<br>
+                <strong>BGP 隧道中转</strong>：入口具备多线 BGP 容灾，网络延迟与丢包率显著降低。<br>
+                <strong>IPLC / IEPL 内网专线</strong>：不经过公网 GFW，晚高峰及敏感时期稳定低延迟。</p>
+              </div>
+
+              <div style="font-size: 0.88rem; line-height: 1.7; color: #334155;">
+                <h4 style="font-size: 0.95rem; font-weight: 700; color: #2563eb; margin-bottom: 4px;">2. 现代协议支持</h4>
+                <p style="margin:0;">优秀的机场会紧跟协议迭代步伐。除了常见的 Shadowsocks、Trojan 之外，良好支持 VLESS 以及抗弱网抖动的 Hysteria 2 等前沿协议的节点，在突发丢包环境下表现更佳。</p>
+              </div>
+
+              <div style="font-size: 0.88rem; line-height: 1.7; color: #334155;">
+                <h4 style="font-size: 0.95rem; font-weight: 700; color: #2563eb; margin-bottom: 4px;">3. 解锁能力与原生 IP</h4>
+                <p style="margin:0;"><strong>流媒体全解锁</strong>：支持 Netflix、Disney+、YouTube Premium、TikTok 等家宽/原生 IP 解锁。<br>
+                <strong>AI 平台保障</strong>：针对 ChatGPT、Claude、Gemini 优化纯净 IP，避免频繁验证与封号。</p>
+              </div>
+
+              <div style="font-size: 0.88rem; line-height: 1.7; color: #334155;">
+                <h4 style="font-size: 0.95rem; font-weight: 700; color: #2563eb; margin-bottom: 4px;">4. 冗余容灾与真实带宽</h4>
+                <p style="margin:0;">好机场不会超售过多带宽。更重要的是，在个别节点受阻时，后端能否自动漂移切换，保障主力节点 99% 以上的可用率。</p>
+              </div>
+            </div>
+
+            <div style="font-size: 0.88rem; line-height: 1.7; color: #334155; margin-top: 14px; padding-top: 10px; border-top: 1px dashed #cbd5e1;">
+              <h4 style="font-size: 0.95rem; font-weight: 700; color: #2563eb; margin-bottom: 4px;">5. 运营历史与售后支持</h4>
+              <p style="margin:0;">老牌服务商通常经过了时间的检验，抗风险能力更强。拥有活跃的 Telegram 交流群、工单响应及时的客服团队，是避免“交学费”的重要保障。</p>
+            </div>
+          </div>
+
+          <p style="font-size: 0.88rem; color: #64748b; margin-top: 16px; margin-bottom: 0; text-align: right; font-style: italic;">
+            无论是追寻极致的速度还是追求稳定的长久陪伴，“机场好”始终坚持用真实数据测速说话，持续为你输出客观、透明的选购参考与技术避坑指南。
+          </p>
+        </section>
+
+        <!-- 1. Provider Recommendation List -->
+        <section style="margin-bottom: 40px;">
+          <div class="section-title">
+            <span>🌟 2026 核心主推与精选好机场推荐</span>
+            <span style="font-size: 0.85rem; color: #64748b; font-weight: normal;">已人工实时核验节点与线路</span>
+          </div>
+
+          <div class="provider-card-grid">
+            {{ range .Site.Data.providers }}
+              {{ partial "provider_card.html" . }}
+            {{ end }}
+          </div>
+        </section>
+
+        <!-- 2. Comparison Table -->
+        <section style="margin-bottom: 40px;">
+          <div class="section-title">
+            <span>📊 28 大热门机场线路与价格对比表</span>
+          </div>
+          <p style="font-size: 0.9rem; color: #64748b; margin-bottom: 12px;">
+            提示：下表整理了全站28家翻墙机场的入口价格、流量配额、线路特色及AI解锁支持情况。请点击“官网注册”直达官方后台选购套餐。
+          </p>
+          <div class="table-responsive">
+            <table class="cmp-table">
+              <thead>
+                <tr>
+                  <th style="white-space: nowrap; text-align: center;">排名</th>
+                  <th style="white-space: nowrap;">机场名称</th>
+                  <th style="white-space: nowrap;">参考价格</th>
+                  <th style="white-space: nowrap;">每月流量</th>
+                  <th style="min-width: 180px;">线路类型/特色</th>
+                  <th style="min-width: 160px;">AI 解锁支持</th>
+                  <th style="white-space: nowrap; text-align: center;">直达注册</th>
+                </tr>
+              </thead>
+              <tbody>
+                {{ range .Site.Data.providers }}
+                <tr>
+                  <td style="white-space: nowrap; text-align: center;"><strong>#{{ .rank }}</strong></td>
+                  <td style="white-space: nowrap;"><a href="/providers/{{ .slug }}/index.html"><strong>{{ .name }}</strong></a></td>
+                  <td style="white-space: nowrap;"><span style="color: #dc2626; font-weight: bold;">{{ .price }}</span></td>
+                  <td style="white-space: nowrap;">{{ .traffic }}</td>
+                  <td>{{ .nodes }}</td>
+                  <td><span class="tag-ai-badge">{{ .ai_unlock }}</span></td>
+                  <td style="white-space: nowrap; text-align: center;">
+                    <a href="{{ .url }}" target="_blank" rel="sponsored nofollow noopener" class="btn-cmp-register">
+                      官网注册
+                    </a>
+                  </td>
+                </tr>
+                {{ end }}
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <!-- 3. Recommendation Articles Section -->
+        <section style="margin-bottom: 40px;">
+          <div class="section-title">
+            <span>🚀 2026 精选好机场选购指南文章</span>
+            <a href="/jichang-tuijian/index.html" style="font-size: 0.9rem;">查看全部 →</a>
+          </div>
+          <div class="article-grid">
+            {{ range $idx, $page := where .Site.RegularPages "Section" "jichang-tuijian" }}
+              {{ if lt $idx 6 }}
+              <a href="{{ $page.RelPermalink }}index.html" class="article-card" style="text-decoration: none; color: inherit; display: flex; flex-direction: column; justify-content: space-between;">
+                <div>
+                  <h4 style="color:#0f172a; margin-bottom:10px;">{{ $page.Title }}</h4>
+                  <p class="article-summary" style="margin-top:8px;">{{ $page.Summary | truncate 100 }}</p>
+                </div>
+                <div class="article-meta" style="margin-top:14px; display:flex; justify-content:space-between; align-items:center;">
+                  <span>{{ $page.Date.Format "2006-01-02" }}</span>
+                  <span style="color:#2563eb; font-weight:bold;">阅读原文 →</span>
+                </div>
+              </a>
+              {{ end }}
+            {{ end }}
+          </div>
+        </section>
+
+        <!-- 4. Client Tutorial Section -->
+        <section style="margin-bottom: 40px;">
+          <div class="section-title">
+            <span>💡 小白零基础上手教程</span>
+            <a href="/jiaocheng/index.html" style="font-size: 0.9rem;">查看全部 →</a>
+          </div>
+          <div class="article-grid">
+            {{ range $idx, $page := where .Site.RegularPages "Section" "jiaocheng" }}
+              {{ if lt $idx 6 }}
+              <a href="{{ $page.RelPermalink }}index.html" class="article-card" style="text-decoration: none; color: inherit; display: flex; flex-direction: column; justify-content: space-between;">
+                <div>
+                  <h4 style="color:#0f172a; margin-bottom:10px;">{{ $page.Title }}</h4>
+                  <p class="article-summary" style="margin-top:8px;">{{ $page.Summary | truncate 100 }}</p>
+                </div>
+                <div class="article-meta" style="margin-top:14px; display:flex; justify-content:space-between; align-items:center;">
+                  <span>{{ $page.Date.Format "2006-01-02" }}</span>
+                  <span style="color:#2563eb; font-weight:bold;">阅读原文 →</span>
+                </div>
+              </a>
+              {{ end }}
+            {{ end }}
+          </div>
+        </section>
+
+        <!-- 5. Knowledge Section -->
+        <section style="margin-bottom: 40px;">
+          <div class="section-title">
+            <span>🌐 节点与专线科普</span>
+            <a href="/zhishi/index.html" style="font-size: 0.9rem;">查看全部 →</a>
+          </div>
+          <div class="article-grid">
+            {{ range $idx, $page := where .Site.RegularPages "Section" "zhishi" }}
+              {{ if lt $idx 6 }}
+              <a href="{{ $page.RelPermalink }}index.html" class="article-card" style="text-decoration: none; color: inherit; display: flex; flex-direction: column; justify-content: space-between;">
+                <div>
+                  <h4 style="color:#0f172a; margin-bottom:10px;">{{ $page.Title }}</h4>
+                  <p class="article-summary" style="margin-top:8px;">{{ $page.Summary | truncate 100 }}</p>
+                </div>
+                <div class="article-meta" style="margin-top:14px; display:flex; justify-content:space-between; align-items:center;">
+                  <span>{{ $page.Date.Format "2006-01-02" }}</span>
+                  <span style="color:#2563eb; font-weight:bold;">阅读原文 →</span>
+                </div>
+              </a>
+              {{ end }}
+            {{ end }}
+          </div>
+        </section>
+
+        <!-- 6. FAQ Quick Preview -->
+        <section style="margin-bottom: 40px;">
+          <div class="section-title">
+            <span>❓ 常见问题 FAQ 快览</span>
+            <a href="/faq/index.html" style="font-size: 0.9rem;">查看完整 100 问 →</a>
+          </div>
+          {{ range $idx, $page := where .Site.RegularPages "Section" "faq" }}
+            {{ if lt $idx 5 }}
+            <div class="faq-item">
+              <div class="faq-question">❓ <a href="{{ $page.RelPermalink }}index.html">{{ $page.Title }}</a></div>
+              <div class="faq-answer">{{ $page.Content | truncate 200 }}</div>
+            </div>
+            {{ end }}
+          {{ end }}
+        </section>
+      </div>
+
+      <!-- Sidebar -->
+      <aside class="sidebar">
+        <!-- Widget 1: TG Channel -->
+        <div class="widget" style="background: linear-gradient(135deg, #0088cc, #005588); color: #fff;">
+          <h4 style="font-size: 1.15rem; margin-bottom: 8px;">✈️ TG 官方交流频道</h4>
+          <p style="font-size: 0.85rem; opacity: 0.9; margin-bottom: 14px;">
+            获取最新机场优惠码、防失联订阅备用域名与实时节点状态监控！
+          </p>
+          <a href="{{ .Site.Params.tgChannel }}" target="_blank" rel="sponsored nofollow noopener" style="display: block; text-align: center; background: #fff; color: #0088cc; font-weight: bold; padding: 10px; border-radius: 6px;">
+            👉 立即加入 Telegram 频道
+          </a>
+        </div>
+
+        <!-- Widget 2: Top 4 Featured -->
+        <div class="widget">
+          <h4 class="widget-title">🏆 TOP 4 核心主推机场</h4>
+          <ul class="widget-list">
+            {{ range $idx, $p := .Site.Data.providers }}
+              {{ if lt $idx 4 }}
+              <li>
+                <div style="display:flex; justify-content: space-between; align-items:center;">
+                  <a href="/providers/{{ $p.slug }}/index.html"><strong>#{{ $p.rank }} {{ $p.name }}</strong></a>
+                  <a href="{{ $p.url }}" target="_blank" rel="sponsored nofollow noopener" style="background:#dc2626; color:#fff; font-size:0.75rem; padding:2px 8px; border-radius:4px; font-weight:bold;">
+                    注册
+                  </a>
+                </div>
+                <div style="font-size:0.75rem; color:#64748b; margin-top:4px;">{{ $p.features }}</div>
+              </li>
+              {{ end }}
+            {{ end }}
+          </ul>
+        </div>
+
+        <!-- Widget 3: Quick Setup Guides -->
+        <div class="widget">
+          <h4 class="widget-title">🛠️ 客户端使用指南</h4>
+          <ul class="widget-list">
+            <li><a href="/jiaocheng/ios-shadowrocket-setup/index.html">iOS 小火箭 Shadowrocket 配置</a></li>
+            <li><a href="/jiaocheng/windows-clash-verge-guide/index.html">Windows Clash Verge 配置教程</a></li>
+            <li><a href="/jiaocheng/android-clash-meta-guide/index.html">Android Clash Meta 配置导入</a></li>
+            <li><a href="/jiaocheng/sing-box-universal-tutorial/index.html">Sing-box 通用订阅配置教程</a></li>
+            <li><a href="/jiaocheng/mac-clash-nyanpasu-setup/index.html">macOS Clash 配置教程</a></li>
+          </ul>
+        </div>
+      </aside>
+    </div>
+  </div>
+{{ end }}

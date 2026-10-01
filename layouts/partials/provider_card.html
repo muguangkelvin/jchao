@@ -1,0 +1,42 @@
+<div class="provider-card {{ if le .rank 4 }}top-4{{ end }}">
+  <div class="rank-badge">
+    <span class="rank-num">#{{ .rank }}</span>
+    <span class="rank-label">{{ if le .rank 4 }}主推{{ else }}精选{{ end }}</span>
+  </div>
+  
+  <div class="provider-info">
+    <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 8px; margin-bottom: 8px;">
+      <h3 style="margin:0; font-size: 1.25rem; font-weight: 800;"><a href="/providers/{{ .slug }}/index.html" style="color: #0f172a; text-decoration: none;">{{ .name }}</a></h3>
+      <div class="provider-tags" style="margin:0;">
+        <span class="tag tag-ai">AI: {{ .ai_unlock }}</span>
+        {{ if .coupon }}<span class="tag tag-coupon">优惠码: {{ .coupon }}</span>{{ end }}
+      </div>
+    </div>
+
+    <!-- 4 Structured Parallel Aligned Metadata Fields -->
+    <div class="provider-details-grid">
+      <div class="detail-item">
+        <span class="detail-label">💰 套餐价格：</span>
+        <span class="detail-value highlight-price">{{ .price }}</span>
+        <span class="detail-sub">({{ .traffic }})</span>
+      </div>
+      <div class="detail-item">
+        <span class="detail-label">📱 适用设备：</span>
+        <span class="detail-value">{{ .devices }}</span>
+      </div>
+      <div class="detail-item">
+        <span class="detail-label">🌍 地区热点：</span>
+        <span class="detail-value">{{ .regions }}</span>
+      </div>
+      <div class="detail-item full-width">
+        <span class="detail-label">📝 机场简介：</span>
+        <span class="detail-value text-desc">{{ or .intro .features }}</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="provider-actions">
+    <a href="{{ .url }}" target="_blank" rel="sponsored nofollow noopener" class="btn-register">⚡ 官网注册</a>
+    <a href="/providers/{{ .slug }}/index.html" class="btn-detail">📖 详细测评</a>
+  </div>
+</div>

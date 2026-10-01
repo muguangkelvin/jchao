@@ -1,0 +1,16 @@
+{{ define "main" }}
+<div class="container" style="margin-top: 30px;">
+  <div class="section-title">
+    <span>全站 28 家机场服务商总览与详细评测列表</span>
+  </div>
+  <p style="font-size:0.95rem; color:#64748b; margin-bottom:24px;">
+    本页面列出了本站收录并评测的全部 28 家科学上网翻墙机场。包含灵动云、暮光网络、飞猫云、微风网络等核心主推品牌及各大特色性价比专线机场。点击“官网注册”直接跳转至官方注册页面。
+  </p>
+
+  <div class="provider-card-grid">
+    {{ range .Site.Data.providers }}
+      {{ partial "provider_card.html" . }}
+    {{ end }}
+  </div>
+</div>
+{{ end }}

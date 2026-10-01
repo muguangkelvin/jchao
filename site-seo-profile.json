@@ -1,0 +1,65 @@
+{
+  "profileVersion": "2026.1",
+  "siteTopic": "面向小白用户的翻墙机场推荐、科学上网指南与全平台客户端配置",
+  "domain": "https://jchao.xyz",
+  "brandName": "机场好 (jchao.xyz)",
+  "tgLink": "https://t.me/+rT04DqKCxa01NzJl",
+  "primaryKeywords": [
+    "机场推荐",
+    "梯子推荐",
+    "魔法上网",
+    "魔法机场",
+    "科学上网",
+    "翻墙机场"
+  ],
+  "secondaryKeywords": [
+    "好用的机场",
+    "便宜机场",
+    "稳定机场推荐",
+    "高性价比机场",
+    "IPLC专线机场",
+    "翻墙软件",
+    "科学上网梯子",
+    "机场节点购买",
+    "外网加速器",
+    "客户端配置教程"
+  ],
+  "heroKeywords": [
+    "2026精选好机场推荐",
+    "小白零基础科学上网指南",
+    "高速稳定防失联节点",
+    "一键导入开箱即用"
+  ],
+  "footerKeywords": [
+    "机场好（jchao.xyz）版权所有",
+    "网络翻墙加速器合规测评与免责声明",
+    "节点订阅稳定性监控",
+    "新手客户端下载与使用指南"
+  ],
+  "navigationItems": [
+    {
+      "label": "首页",
+      "url": "/"
+    },
+    {
+      "label": "精选好机场",
+      "url": "/jichang-tuijian/"
+    },
+    {
+      "label": "小白上手教程",
+      "url": "/jiaocheng/"
+    },
+    {
+      "label": "节点与专线科普",
+      "url": "/zhishi/"
+    },
+    {
+      "label": "常见问题与答疑",
+      "url": "/faq/"
+    },
+    {
+      "label": "机场总览表",
+      "url": "/providers/"
+    }
+  ]
+}

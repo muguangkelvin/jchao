@@ -1,0 +1,29 @@
+<header>
+  <div class="container header-inner">
+    <div class="brand">
+      <a href="/index.html" class="brand-logo">机场好</a>
+      <span class="brand-tagline">2026精选好机场推荐与科学上网指南</span>
+    </div>
+
+    <nav class="main-nav" id="main-nav">
+      <a href="/index.html">首页</a>
+      <a href="/jichang-tuijian/index.html">精选好机场</a>
+      <a href="/jiaocheng/index.html">小白上手教程</a>
+      <a href="/zhishi/index.html">节点与专线科普</a>
+      <a href="/faq/index.html">常见问题与答疑</a>
+      <a href="/providers/index.html">机场总览表</a>
+    </nav>
+
+    <div class="header-right">
+      <div class="search-box">
+        <span class="search-icon-img">🔍</span>
+        <input type="text" id="search-input" class="search-input" placeholder="搜索任意机场 / 关联词 / 客户端 / 教程..." aria-label="搜索">
+        <div id="search-results-modal"></div>
+      </div>
+      <a href="{{ .Site.Params.tgChannel }}" target="_blank" rel="sponsored nofollow noopener" class="btn-tg-header">
+        ✈️ TG 官方频道
+      </a>
+      <button class="menu-toggle" id="mobile-menu-toggle" aria-label="切换导航菜单">☰</button>
+    </div>
+  </div>
+</header>
